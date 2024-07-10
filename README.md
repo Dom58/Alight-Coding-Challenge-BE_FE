@@ -43,7 +43,7 @@ Frontend `A. Setup [Backend Project]`
 In your terminal, run
 `   cd frontend
   `
-to navigate to the Google front project for frontend codebase.
+to navigate to the Google front project for the frontend codebase.
 After navigatin g to the frontend project/folder, follow the below steps
 
 2. Install dependencies
@@ -66,30 +66,45 @@ To Build the project start by running in your terminal `pnpm build` or `yarn bui
 
 1. `pnpm start` or `yarn start` or `npm start` depends on your favorite
 
-2. The browser will be opended itself.
-   Otherwise, Copy and Paste this to [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. The browser will open itself.
+   Otherwise, please Copy and Paste this to [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Some Screenshots
 
 ### Homescreen of the Project
+![image](https://github.com/Dom58/Alight-Coding-Challenge-BE_FE/assets/33524053/e047bbd0-cc98-43b7-a6a2-9fdd5df81c86)
 
---Loading-----
 
-### Responsivines on mobile
+### Responsiveness
+#### Big Screen
+![image](https://github.com/Dom58/Alight-Coding-Challenge-BE_FE/assets/33524053/95b8c543-c6c4-420e-9e1f-d3091d9cf60c)
 
---Loading-----
+#### IPad
+![image](https://github.com/Dom58/Alight-Coding-Challenge-BE_FE/assets/33524053/6751e0b0-103e-4efd-86bd-98ed86d36edf)
+
+#### Phone
+![image](https://github.com/Dom58/Alight-Coding-Challenge-BE_FE/assets/33524053/8443a591-eaca-453a-ab56-2237e401addd)
 
 ### Filtered Products/Items
+#### Search with the keyword `Electronic`, where the API searches in product names and categories
+![image](https://github.com/Dom58/Alight-Coding-Challenge-BE_FE/assets/33524053/d24c66fa-8a26-4497-a4e1-01d7b5b4e609)
 
---Loading-----
+#### Search with the keyword `Electricity`, and you will find no data
+![image](https://github.com/Dom58/Alight-Coding-Challenge-BE_FE/assets/33524053/97272dda-cf61-4d73-97dd-1e756396894d)
+
 
 ### Video
+https://github.com/Dom58/Alight-Coding-Challenge-BE_FE/assets/33524053/9f036ea8-0ea4-408a-8a8c-6260e942dc19
 
----Loading-----
+### Video with Search Product functionalities 
+https://github.com/Dom58/Alight-Coding-Challenge-BE_FE/assets/33524053/e307633b-06af-4d69-88d2-af6226bf1bdc
+
+
+
 
 # B. Setup [Backend Project]
 
-1. In the same reposriory from `A` section above, just to the root folder of the cloned project
+1. In the same repository from the `A` section above, just to the root folder of the cloned project
 
 In your terminal, run
 `    cd backend
@@ -108,7 +123,7 @@ Copy and paste the `.env.example` file and rename the copied file to `.env`.
 
 ### For Development
 
-1. `pnpm dev` or `yarn dev` or `npm dev` depends on your favorite
+1. `pnpm dev` or `yarn dev` or `npm dev` depends on your favourite
 
 ### For Build
 
@@ -122,8 +137,8 @@ Copy and paste the `.env.example` file and rename the copied file to `.env`.
 
 ### NOTE
 
-By default the are `50 items` that are hardcoded in the Backend project
-To add more products view this endpoints you can use `Postman` to create more items and display them.
+By default there are `50 items` that are hardcoded in the Backend project
+To add more products to view this endpoint, you can use `Postman` to create and display more items.
 
 ### APIs
 
@@ -132,5 +147,5 @@ To add more products view this endpoints you can use `Postman` to create more it
 | POST   | /create     | Create an item   | http://localhost:8000/create|
 | GET     | /items      | Fetch all items      |http://localhost:8000/items |
 | GET   | /items/<id>     | Get a single id by ID    |http://localhost:8000/2 |
-| GET     | /search?q=:keyword       | search items by category or by name, `keyword` should be any thing      | http://localhost:8000/search?q=electronics
+| GET     | /search?q=:keyword       | search items by `category` or by `name`, `keyword` should be anything      | http://localhost:8000/search?q=electronics
 |      |        |    |  |
