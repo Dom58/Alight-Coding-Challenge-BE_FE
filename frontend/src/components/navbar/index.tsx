@@ -13,12 +13,12 @@ const NavBar: React.FC = () => {
 						<a href="#" className="text-[14px] hover:text-[#c5d9fc]">Gmail</a>
 						<a href="#" className="text-[14px] hover:text-[#c5d9fc]">Images</a>
 					</div>
-					
+
 					<Link href={'#'}>
-						<Image src="/lab.svg" alt="Mic" width={22} height={22} className='-mt-1' />
+						<Image src="/assets/lab.svg" alt="Mic" width={22} height={22} className='-mt-1' />
 					</Link>
 					<Link href={'#'}>
-						<Image src="/menu.svg" alt="Mic" width={15} height={15} className='mr-5' />
+						<Image src="/assets/menu.svg" alt="Mic" width={15} height={15} className='mr-5' />
 					</Link>
 				</div>
 
@@ -28,7 +28,7 @@ const NavBar: React.FC = () => {
 							firstName={"Dom58"}
 							lastName={""}
 							customClasses="bg-teal-blue h-10 w-10 border-2 border-orange-600"
-							image='/profile.jpg'
+							image="/assets/profile.jpg"
 						/>
 					</div>
 				</div>

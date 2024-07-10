@@ -6,3 +6,10 @@ export interface Item {
     image: string;
     category: string;
 }
+
+export type IProductType = {
+    item: Item;
+}
+export interface ISearchProps {
+    searchProducts: VoidFunction
+}

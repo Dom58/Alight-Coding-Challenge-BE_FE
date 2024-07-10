@@ -3,6 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { getSearchedProducts } from '@/services';
 import Image from "next/image";
 import Link from "next/link";
+import Card from "@/components/products/Card";
 
 const Products = (props: any) => {
   const { q: keyword } = props.searchParams;
@@ -18,7 +19,7 @@ const Products = (props: any) => {
         <div className="container max-w-[584px] w-full p-5 flex flex-col">
           <div className="flex">
             <Link href={'/'}>
-              <Image src="/back.svg" alt={'back'} width={30} height={30} className='mr-5' />
+              <Image src="/assets/back.svg" alt={'back'} width={30} height={30} className='mr-5' />
             </Link>
             <h1 className='text-3xl'>
               Products {!isLoading && `(${!!data && data.length})`}
@@ -26,14 +27,8 @@ const Products = (props: any) => {
           </div>
           {!isLoading ? (
             <div className='w-full'>
-              {!!data?.length && data.map(({ id, name, category, price, description }) => (
-                <div className="card border border-gray-600 shadow-lg shadow-gray-500/50 rounded-lg m-6 p-4 hover:bg-[#c0bebe] hover:text-black hover:cursor-pointer" key={id}>
-                  <Image src="/cart.svg" alt={name} width={200} height={200} className='mr-5' />
-                  <h1 className="text-2xl">{name}</h1>
-                  <p>{description}</p>
-                  <p className="price">${price}</p>
-                  <p className="text-[#e74e3a]"><button>{category}</button></p>
-                </div>
+              {!!data?.length && data.map((item) => (
+                <Card item={item} />
               ))}
             </div>
           ) : <p className='text-[#e74e3a]'>Loading...</p>

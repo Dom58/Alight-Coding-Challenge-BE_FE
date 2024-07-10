@@ -1,6 +1,7 @@
 "use client";
 import Footer from '@/components/footer/Footer';
 import Languages from '@/components/languages/Languages';
+import Search from '@/components/search/Search';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -23,7 +24,7 @@ export default function Home() {
       <div className="flex flex-1 items-center justify-center px-4">
         <div className="container max-w-[584px] w-full p-5 flex flex-col">
           <div className="flex justify-center mb-5">
-            <Image src="/google-logo.png" alt="Google Logo" width={272} height={92} />
+            <Image src="/assets/google-logo.png" alt="Google Logo" width={272} height={92} />
           </div>
 
           <div className="w-full bg-transparent border-[1px] border-gray-500 rounded-full flex items-center px-5 py-3 mb-5">
@@ -39,24 +40,14 @@ export default function Home() {
             />
 
             <Link href={'#'}>
-              <Image src="/mic.svg" alt="Mic" width={20} height={20} className='mr-5' />
+              <Image src="/assets/mic.svg" alt="Mic" width={20} height={20} className='mr-5' />
             </Link>
             <Link href={'#'}>
-              <Image src="/camera.svg" alt="Camera" width={20} height={20} />
+              <Image src="/assets/camera.svg" alt="Camera" width={20} height={20} />
             </Link>
           </div>
 
-          <div className="flex items-center space-x-3 justify-center mt-3">
-            <button
-              className="bg-[#303134] text-[#e8eaed] px-5 py-2.5 text-[14px] rounded-md hover:bg-[#3c4043] cursor-pointer"
-              onClick={() => searchProducts()}
-            >
-              Google Search
-            </button>
-            <button className="bg-[#303134] text-[#e8eaed] px-5 py-2.5 text-[14px] rounded-md hover:bg-[#3c4043] cursor-pointer">
-              I&apos;m Feeling Lucky
-            </button>
-          </div>
+          <Search searchProducts={searchProducts} />
           <Languages />
         </div>
       </div>
