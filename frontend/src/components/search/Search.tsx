@@ -1,7 +1,7 @@
 "use client";
 import { FC } from "react";
 
-const Languages: FC = () => {
+const Search: FC = () => {
     return (
         <div>
             <div className="flex items-center space-x-2 justify-center text-[#bdc1c6] text-[13px] mt-6">
@@ -20,4 +20,4 @@ const Languages: FC = () => {
     );
 };
 
-export default Languages;
+export default Search;

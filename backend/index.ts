@@ -48,48 +48,26 @@ app.get("/items", async (req: Request, res: Response) => {
     if (!items.length) {
       return res.status(HTTP_NOT_FOUND).json({ error: 'No item created!' })
     }
-    return res.status(HTTP_OK).json({ data: items });
+    return res.status(HTTP_OK).json(items);
   } catch (e: any) {
     res.json({ error: e });
   }
 });
 
 app.get('/search', (req: Request, res: Response) => {
-  // const { name, category } = req.query;
-  // let filteredItems: Item[] = items;
-
-  // if (name) {
-  //   filteredItems = filteredItems.filter(item =>
-  //     item.name.toLowerCase().includes((name as string).toLowerCase())
-  //   );
-  // }
-
-  // if (category) {
-  //   filteredItems = filteredItems.filter(item =>
-  //     item.category.toLowerCase() === (category as string).toLowerCase()
-  //   );
-  // }
-
-
-
   const { q } = req.query;
 
-  // Initialize the 'filteredItems' array with the full 'items' array
   let filteredItems: Item[] = items;
-
-  // Filter the items by name and category if the 'q' query parameter is provided
   if (q) {
     const searchTerms = (q as string).toLowerCase().split(' ');
     filteredItems = filteredItems.filter(item => {
-      // Check if any of the search terms match the item's name or category
       return searchTerms.some(term =>
         item.name.toLowerCase().includes(term) ||
         item.category.toLowerCase().includes(term)
       );
     });
   }
-
-  res.status(HTTP_OK).json({ data: filteredItems });
+  res.status(HTTP_OK).json(filteredItems);
 });
 
 app.get("/items/:id", async (req: Request, res: Response) => {

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/navbar";
-import Footer from "@/components/footer/Footer";
+import QueryProvider from './QueryProvider';
 
 const roboto = Roboto({
   weight: '500',
@@ -23,11 +23,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={roboto.className}>
       <body>
-        <div className="font-sans bg-[#202124] text-[#e8eaed] flex flex-col h-screen">
-          <NavBar />
-          {children}
-          <Footer />
-        </div>
+        <QueryProvider>
+          <div className="font-sans bg-[#202124] text-[#e8eaed] flex flex-col h-screen">
+            <NavBar />
+            {children}
+          </div>
+        </QueryProvider>
       </body>
     </html>
   );
