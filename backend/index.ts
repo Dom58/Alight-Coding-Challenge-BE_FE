@@ -11,6 +11,7 @@ import { items } from './database/menu';
 import {
   HTTP_BAD_REQUEST,
   HTTP_CREATED,
+  HTTP_EXIST,
   HTTP_NOT_FOUND,
   HTTP_OK
 } from './constants/httpStatusCodes';
@@ -34,12 +35,18 @@ app.get('/', (req: Request, res: Response) => {
   });
 });
 
-app.post("/create", async (req: Request, res: Response) => {
+app.post("/items/create", async (req: Request, res: Response) => {
   try {
     const item: Item = req.body;
     if (item.name == '' || item.category == '' || item.description == '' || item.price == null) {
       res.status(HTTP_BAD_REQUEST).json({ error: 'Field name, category, price and description are required' });
     }
+    const findItem = items.find(itm => itm.name === item.name);
+
+    if (findItem) {
+      return res.status(HTTP_EXIST).json({ error: `Item with name #${item.name}# already exist` })
+    }
+
     const newItem = {
       ...item,
       id: items.length + 1

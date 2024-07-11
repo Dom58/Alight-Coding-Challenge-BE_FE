@@ -153,8 +153,8 @@ To add more products to view this endpoint, you can use `Postman` to create and 
 
 | Method         | Endpoint             | Description  | API Example |
 | ---         |     ---      |          --- | ---|
-| POST   | /items/create     | Create an item   | http://localhost:8000/create|
+| POST   | /items/create     | Create an item   | http://localhost:8000/items/create|
 | GET     | /items      | Fetch all items      |http://localhost:8000/items |
-| GET   | /items/<id>     | Get a single id by ID    |http://localhost:8000/2 |
+| GET   | /items/<id>     | Get a single id by ID    |http://localhost:8000/items/2 |
 | GET     | /search?q=:keyword       | search items by `category` or by `name`, `keyword` should be anything      | http://localhost:8000/search?q=electronics
 |      |        |    |  |
