@@ -34,7 +34,7 @@ export default function Home() {
             <input
               type="text"
               className="bg-transparent border-none outline-none text-[16px] text-[#e8eaed] flex-1"
-              placeholder="Search..."
+              placeholder="Search product by name or category..."
               value={searchTerm}
               onChange={handleInputChange}
             />

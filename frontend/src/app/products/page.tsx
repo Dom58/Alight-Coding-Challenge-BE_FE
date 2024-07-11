@@ -29,7 +29,7 @@ const Products = (props: any) => {
           {!isLoading ? (
             <div className='w-full'>
               {!!data?.length && data.map((item) => (
-                <Card item={item} />
+                <Card item={item} key={item.id} />
               ))}
             </div>
           ) : <p className='text-[#e74e3a]'>Loading...</p>

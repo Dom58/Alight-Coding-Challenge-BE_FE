@@ -35,9 +35,11 @@ Google Front Page Clone
    `https://github.com/Dom58/Alight-Coding-Challenge-BE_FE.git`
 
 In your terminal, run
-`     cd frontend
-    `
-to navigate to the Google front project
+`cd Alight-Coding-Challenge-BE_FE` and then
+`cd frontend` or simply run `cd Alight-Coding-Challenge-BE_FE/frontend`
+to navigate to the Google front project for the frontend codebase.
+
+After you navigate to the frontend project/folder, follow the below steps to run the project
 
 2. Install dependencies
 
@@ -59,29 +61,37 @@ Copy and paste the `.env.example` file and rename the copied file to `.env`.
 ## Some Screenshots
 
 ### Homescreen of the Project
+
 ![image](https://github.com/Dom58/Alight-Coding-Challenge-BE_FE/assets/33524053/e047bbd0-cc98-43b7-a6a2-9fdd5df81c86)
 
-
 ### Responsiveness
+
 #### Big Screen
+
 ![image](https://github.com/Dom58/Alight-Coding-Challenge-BE_FE/assets/33524053/95b8c543-c6c4-420e-9e1f-d3091d9cf60c)
 
 #### IPad
+
 ![image](https://github.com/Dom58/Alight-Coding-Challenge-BE_FE/assets/33524053/6751e0b0-103e-4efd-86bd-98ed86d36edf)
 
 #### Phone
+
 ![image](https://github.com/Dom58/Alight-Coding-Challenge-BE_FE/assets/33524053/8443a591-eaca-453a-ab56-2237e401addd)
 
 ### Filtered Products/Items
+
 #### Search with the keyword `Electronic`, where the API searches in product names and categories
+
 ![image](https://github.com/Dom58/Alight-Coding-Challenge-BE_FE/assets/33524053/d24c66fa-8a26-4497-a4e1-01d7b5b4e609)
 
 #### Search with the keyword `Electricity`, and you will find no data
+
 ![image](https://github.com/Dom58/Alight-Coding-Challenge-BE_FE/assets/33524053/97272dda-cf61-4d73-97dd-1e756396894d)
 
-
 ### Video
+
 https://github.com/Dom58/Alight-Coding-Challenge-BE_FE/assets/33524053/9f036ea8-0ea4-408a-8a8c-6260e942dc19
 
-### Video with Search Product functionalities 
+### Video with Search Product functionalities
+
 https://github.com/Dom58/Alight-Coding-Challenge-BE_FE/assets/33524053/e307633b-06af-4d69-88d2-af6226bf1bdc

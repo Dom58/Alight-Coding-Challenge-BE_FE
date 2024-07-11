@@ -5,9 +5,11 @@
    `https://github.com/Dom58/Alight-Coding-Challenge-BE_FE.git`
 
 In your terminal, run
-`     cd backend
-    `
-to navigate to the backend project
+`cd Alight-Coding-Challenge-BE_FE` and then
+`cd backend` or simply run `cd Alight-Coding-Challenge-BE_FE/backend`
+to navigate to the Google front project for the backend codebase.
+
+After you navigate to the backend project/folder, follow the below steps to run backend project.
 
 2. Install dependencies
 
