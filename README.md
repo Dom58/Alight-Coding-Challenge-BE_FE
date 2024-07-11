@@ -2,9 +2,9 @@
 
 ## Context
 
-This repository contains two project the one for `Backend side` to get all the necessary APIs for searching in Google Front Page and also the one for the `Fronted side` as a web of Google Front Page Clone.
+This repository contains two projects one for the `Backend side` to get all the necessary APIs for searching in Google Front Page and also the one for the `Fronted side` as a web of Google Front Page Clone.
 
-This repostory contains also two Parts <br/>
+This repository contains also two Parts <br/>
 
 1. [Frontend](#frontend-project)
 2. [Backend](#backend-project)
@@ -79,6 +79,11 @@ To Build the project start by running in your terminal `pnpm build` or `yarn bui
 
 ![image](https://github.com/Dom58/Alight-Coding-Challenge-BE_FE/assets/33524053/e047bbd0-cc98-43b7-a6a2-9fdd5df81c86)
 
+### User gets an error when clicking on search button by not providing the search Keyword
+
+![image](https://github.com/Dom58/Alight-Coding-Challenge-BE_FE/assets/33524053/192ff9d0-bcc2-4ce4-a968-514fdc899785)
+
+
 ### Responsiveness
 
 #### Big Screen
@@ -126,7 +131,7 @@ In your new terminal, run
 `cd backend` or simply run `cd Alight-Coding-Challenge-BE_FE/backend`
 to navigate to the Google front project for the backend codebase.
 
-After you navigate to the backend project/folder, follow the below steps to run backend project.
+After you navigate to the backend project/folder, follow the below steps to run the backend project.
 
 2. Install dependencies
 

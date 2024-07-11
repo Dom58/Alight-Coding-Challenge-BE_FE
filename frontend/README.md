@@ -64,6 +64,11 @@ Copy and paste the `.env.example` file and rename the copied file to `.env`.
 
 ![image](https://github.com/Dom58/Alight-Coding-Challenge-BE_FE/assets/33524053/e047bbd0-cc98-43b7-a6a2-9fdd5df81c86)
 
+### User gets an error when clicking on search button by not providing the search Keyword
+
+![image](https://github.com/Dom58/Alight-Coding-Challenge-BE_FE/assets/33524053/192ff9d0-bcc2-4ce4-a968-514fdc899785)
+
+
 ### Responsiveness
 
 #### Big Screen
