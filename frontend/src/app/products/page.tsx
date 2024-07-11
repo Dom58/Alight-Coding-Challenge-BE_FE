@@ -25,6 +25,7 @@ const Products = (props: any) => {
               Products {!isLoading && `(${!!data && data.length})`}
             </h1>
           </div>
+              <p className="text-[#a3a2a2] text-sm">Your search keyword was <span className="text-[#e74e3a]">{keyword} </span></p>
           {!isLoading ? (
             <div className='w-full'>
               {!!data?.length && data.map((item) => (

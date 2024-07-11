@@ -9,6 +9,7 @@ import cors from "cors";
 import { Id, Item } from './types';
 import { items } from './database/menu';
 import {
+  HTTP_BAD_REQUEST,
   HTTP_CREATED,
   HTTP_NOT_FOUND,
   HTTP_OK
@@ -36,8 +37,19 @@ app.get('/', (req: Request, res: Response) => {
 app.post("/create", async (req: Request, res: Response) => {
   try {
     const item: Item = req.body;
-    items.push(item);
-    res.status(HTTP_CREATED).json({ data: items });
+    if (item.name == '' || item.category == '' || item.description == '' || item.price == null) {
+      res.status(HTTP_BAD_REQUEST).json({ error: 'Field name, category, price and description are required' });
+    }
+    const newItem = {
+      ...item,
+      id: items.length + 1
+    }
+
+    items.push(newItem);
+    res.status(HTTP_CREATED).json({
+      message: "New item created successfully",
+      item: newItem
+    });
   } catch (e: any) {
     res.json(req.body);
   }
