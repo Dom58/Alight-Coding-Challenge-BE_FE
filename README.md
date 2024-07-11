@@ -137,14 +137,23 @@ Copy and paste the `.env.example` file and rename the copied file to `.env`.
 
 ### NOTE
 
-By default there are `50 items` that are hardcoded in the Backend project
+By default, there are `50 items` that are hardcoded in the Backend project
 To add more products to view this endpoint, you can use `Postman` to create and display more items.
+
+### APIs Testing with Postman [Screenshots]
+
+#### Create a new item
+![image](https://github.com/Dom58/Alight-Coding-Challenge-BE_FE/assets/33524053/22812fe7-b3cd-45e8-b8c0-9d8f07e62a1e)
+
+#### Search a created item
+![image](https://github.com/Dom58/Alight-Coding-Challenge-BE_FE/assets/33524053/936fe50f-6dd9-4152-879e-3ea77fafcd72)
+
 
 ### APIs
 
 | Method         | Endpoint             | Description  | API Example |
 | ---         |     ---      |          --- | ---|
-| POST   | /create     | Create an item   | http://localhost:8000/create|
+| POST   | /items/create     | Create an item   | http://localhost:8000/create|
 | GET     | /items      | Fetch all items      |http://localhost:8000/items |
 | GET   | /items/<id>     | Get a single id by ID    |http://localhost:8000/2 |
 | GET     | /search?q=:keyword       | search items by `category` or by `name`, `keyword` should be anything      | http://localhost:8000/search?q=electronics
