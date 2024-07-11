@@ -8,7 +8,7 @@ import Card from "@/components/products/Card";
 const Products = (props: any) => {
   const { q: keyword } = props.searchParams;
 
-  const { isLoading, data } = useQuery({
+  const { isLoading, data, error } = useQuery({
     queryKey: ["products"],
     queryFn: () => getSearchedProducts(keyword as string),
   });
@@ -22,10 +22,10 @@ const Products = (props: any) => {
               <Image src="/assets/back.svg" alt={'back'} width={30} height={30} className='mr-5' />
             </Link>
             <h1 className='text-3xl'>
-              Products {!isLoading && `(${!!data && data.length})`}
+              Products {!isLoading && !error && `(${!!data && data.length})`}
             </h1>
           </div>
-              <p className="text-[#a3a2a2] text-sm">Your search keyword was <span className="text-[#e74e3a]">{keyword} </span></p>
+          <p className="text-[#a3a2a2] text-sm">Your search keyword was <span className="text-[#e74e3a]">{keyword} </span></p>
           {!isLoading ? (
             <div className='w-full'>
               {!!data?.length && data.map((item) => (
@@ -35,9 +35,14 @@ const Products = (props: any) => {
           ) : <p className='text-[#e74e3a]'>Loading...</p>
           }
 
-          {!isLoading && keyword && !data?.length && (
+          {!isLoading && !error && keyword && !data?.length && (
             <div className="mt-5">
               <p className="text-[#e74e3a]">No product found!</p>
+            </div>
+          )}
+          {!isLoading && error && (
+            <div className="mt-5">
+              <p className="text-[#e74e3a]">{error.message}</p>
             </div>
           )}
         </div>
